@@ -10,8 +10,8 @@
 	
 	var Item = Backbone.Model.extend({
 		defaults: {
-			part1:'Hello',
-			part2:'Mary Rose!'	
+			part1:'',
+			part2:''
 		}	
 	});
 	
@@ -87,7 +87,8 @@
 			this.counter++;
 			var item = new Item();
 			item.set({
-				part2: item.get('part2') + this.counter
+                part1: $("#age").val(),
+				part2: $("#name").val()
 			});
 			this.collection.add(item);
 		},
